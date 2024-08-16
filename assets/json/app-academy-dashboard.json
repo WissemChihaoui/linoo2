@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Lauretta Coie",
+      "image": "1.png",
+      "type": 1,
+      "documents": [
+        {"id": "1", "documentName":"doc1", "docType":"document officiel"},
+        {"id": "2", "documentName":"doc2", "docType":"CV"}
+      ],
+      "date": "5/28/2020",
+      "actif": true,
+      "tarifInter": "0.2",
+      "tarifTrad": "0.00",
+      "mail":"mail@gmail.com"    
+    },
+    {
+      "id": 2,
+      "name": "Jon Doe",
+      "image": "2.png",
+      "type": 2,
+      "documents": [
+        {"id": "1", "documentName":"doc1", "docType":"document officiel"}
+      ],
+      "date": "7/28/2020",
+      "actif": false,
+      "tarifInter": "0.2",
+      "tarifTrad": "0.00",
+      "mail":"mail@gmail.com"    
+    }
+  ]
+}
