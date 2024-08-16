@@ -121,7 +121,7 @@ $(function () {
           {
             targets: 7,
             render: function (a, e, t, n){
-                return '<div class="d-inline-block text-nowrap"><button class="btn btn-lg btn-icon btn-warning waves-effect waves-light rounded-pill me-50"><i class="ri-edit-box-line ri-20px"></i></button><a href="javascript:void(0)" data-bs-target="#view-invoice" data-bs-toggle="modal" class="btn btn-lg btn-icon btn-info waves-effect waves-light rounded-pill me-50"><i class="ri-eye-line ri-20px"></i></a></div>'
+                return '<div class="d-inline-block text-nowrap"><a href="/html/professionnels/edit-facture.html" class="btn btn-lg btn-icon btn-warning waves-effect waves-light rounded-pill me-50"><i class="ri-edit-box-line ri-20px"></i></a><a href="javascript:void(0)" data-bs-target="#view-invoice" data-bs-toggle="modal" class="btn btn-lg btn-icon btn-info waves-effect waves-light rounded-pill me-50"><i class="ri-eye-line ri-20px"></i></a></div>'
             }
           }          
         ],

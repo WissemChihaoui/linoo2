@@ -153,13 +153,7 @@ $(function () {
             searchable: !1,
             orderable: !1,
             render: function (e, t, n, a) {
-              return (
-                '<div class="d-flex align-items-center gap-50"><a href="javascript:;" class="btn btn-sm btn-icon btn-text-secondary rounded-pill waves-effect delete-record" data-bs-toggle="tooltip" title="Delete Invoice"><i class="ri-delete-bin-7-line ri-20px"></i></a><a href="' +
-                o +
-                '" class="btn btn-sm btn-icon btn-text-secondary rounded-pill waves-effect" data-bs-toggle="tooltip" title="Preview"><i class="ri-eye-line ri-20px"></i></a><button class="btn btn-sm btn-icon btn-text-secondary rounded-pill waves-effect dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="ri-more-2-line ri-20px"></i></button><div class="dropdown-menu dropdown-menu-end m-0"><a href="' +
-                o +
-                '" class="dropdown-item"><i class="ri-eye-line me-2"></i><span>View</span></a><a href="javascript:;" class="dropdown-item"><i class="ri-edit-box-line me-2"></i><span>Edit</span></a><a href="javascript:;" class="dropdown-item delete-record"><i class="ri-delete-bin-7-line me-2"></i><span>Delete</span></a></div></div>'
-              );
+              return '<div class="d-inline-block text-nowrap"><a href="/html/professionnels/edit.html" class="btn btn-lg btn-icon btn-warning waves-effect waves-light rounded-pill me-50"><i class="ri-edit-box-line ri-20px"></i></a><button class="btn btn-lg btn-icon btn-danger waves-effect waves-light rounded-pill me-50"><i class="ri-delete-bin-6-line ri-20px"></i></button></div>';
             },
           },
         ],
