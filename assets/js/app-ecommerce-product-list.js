@@ -11,9 +11,11 @@ $(function () {
   ).headingColor;
   var t = $(".datatables-products"),
     s = {
-      1: { title: "Scheduled", class: "bg-label-warning" },
-      2: { title: "Publish", class: "bg-label-success" },
-      3: { title: "Inactive", class: "bg-label-danger" },
+      1: { title: "En Cours", class: "bg-label-info" },
+      2: { title: "Clôturée", class: "bg-label-primary" },
+      3: { title: "En Attente", class: "bg-label-secondary" },
+      4: { title: "Annulée", class: "bg-label-warning" },
+      5: { title: "Refusée", class: "bg-label-danger" },
     },
     i = {
       0: { title: "Household" },
@@ -30,15 +32,16 @@ $(function () {
       ajax: assetsPath + "json/ecommerce-product-list.json",
       columns: [
         { data: "id" },
-        { data: "id" },
         { data: "product_name" },
         { data: "category" },
         { data: "stock" },
         { data: "sku" },
         { data: "price" },
         { data: "quantity" },
+        { data: "montant" },
         { data: "status" },
-        { data: "" },
+        { data: null },
+        { data: null },
       ],
       columnDefs: [
         {
@@ -52,124 +55,75 @@ $(function () {
           },
         },
         {
-          targets: 1,
-          orderable: !1,
-          checkboxes: {
-            selectAllRender: '<input type="checkbox" class="form-check-input">',
-          },
-          render: function () {
-            return '<input type="checkbox" class="dt-checkboxes form-check-input" >';
-          },
-          searchable: !1,
-        },
-        {
-          targets: 2,
+          targets: 4,
           responsivePriority: 1,
           render: function (t, e, n, a) {
             var s = n.product_name,
-              i = n.id,
               o = n.product_brand,
-              r = n.image;
+              r = n.mail;
             return (
-              '<div class="d-flex justify-content-start align-items-center product-name"><div class="avatar-wrapper me-3"><div class="avatar rounded-3 bg-label-secondary">' +
-              (r
-                ? '<img src="' +
-                  assetsPath +
-                  "img/ecommerce-images/" +
-                  r +
-                  '" alt="Product-' +
-                  i +
-                  '" class="rounded-2">'
-                : '<span class="avatar-initial rounded-2 bg-label-' +
-                  [
-                    "success",
-                    "danger",
-                    "warning",
-                    "info",
-                    "dark",
-                    "primary",
-                    "secondary",
-                  ][Math.floor(6 * Math.random())] +
-                  '">' +
-                  (r = (
-                    ((r = (s = n.product_brand).match(/\b\w/g) || []).shift() ||
-                      "") + (r.pop() || "")
-                  ).toUpperCase()) +
-                  "</span>") +
-              '</div></div><div class="d-flex flex-column"><span class="text-nowrap text-heading fw-medium">' +
+              '<div class="d-flex justify-content-start align-items-center product-name"><div class="avatar-wrapper me-3">' +
+             
+              '</div</div><div class="d-flex flex-column"><span class="text-nowrap text-heading fw-medium">' +
               s +
               '</span><small class="text-truncate d-none d-sm-block">' +
               o +
-              "</small></div></div>"
+              '</small><a href="mailto:'+r+'">'+r+'</a></div></div>'
             );
+          },
+        },
+        {
+          targets: 1,
+          responsivePriority: 5,
+          render: function (t, e, n, a) {
+            return ("<a href='javascript:void(0)'>#"+n.id+"</a>")
           },
         },
         {
           targets: 3,
-          responsivePriority: 5,
           render: function (t, e, n, a) {
-            n = i[n.category].title;
-            return (
-              "<h6 class='text-truncate d-flex align-items-center mb-0 fw-normal'>" +
-              {
-                Household:
-                  '<span class="avatar-sm rounded-circle d-flex justify-content-center align-items-center bg-label-warning me-3"><i class="ri-home-6-line"></i></span>',
-                Office:
-                  '<span class="avatar-sm rounded-circle d-flex justify-content-center align-items-center bg-label-success me-3"><i class="ri-briefcase-line"></i></span>',
-                Electronics:
-                  '<span class="avatar-sm rounded-circle d-flex justify-content-center align-items-center bg-label-primary me-3"><i class="ri-smartphone-line"></i></span>',
-                Shoes:
-                  '<span class="avatar-sm rounded-circle d-flex justify-content-center align-items-center bg-label-info me-3"><i class="ri-footprint-line"></i></span>',
-                Accessories:
-                  '<span class="avatar-sm rounded-circle d-flex justify-content-center align-items-center bg-label-secondary me-3"><i class="ri-headphone-line"></i></span>',
-                Game: '<span class="avatar-sm rounded-circle d-flex justify-content-center align-items-center bg-label-dark me-3"><i class="ri-gamepad-line"></i></span>',
-              }[n] +
-              n +
-              "</h6>"
-            );
+            return "<span>" + n.hour + "</span>";
           },
         },
         {
-          targets: 4,
-          orderable: !1,
-          responsivePriority: 3,
+          targets: 2,
           render: function (t, e, n, a) {
-            n = n.stock;
-            return (
-              "<span class='text-truncate'>" +
-              {
-                Out_of_Stock:
-                  '<label class="switch switch-primary switch-sm"><input type="checkbox" class="switch-input" id="switch"><span class="switch-toggle-slider"><span class="switch-off"></span></span></label>',
-                In_Stock:
-                  '<label class="switch switch-primary switch-sm"><input type="checkbox" class="switch-input" checked=""><span class="switch-toggle-slider"><span class="switch-on"></span></span></label>',
-              }[o[n].title] +
-              '<span class="d-none">' +
-              o[n].title +
-              "</span></span>"
-            );
+            return "<span>" + n.date + "</span>";
           },
         },
         {
           targets: 5,
+          responsivePriority: 2,
           render: function (t, e, n, a) {
-            return "<span>" + n.sku + "</span>";
+            var s = n.intrepret,
+              o = n.mail_intrepret;
+            return (
+              '<div class="d-flex justify-content-start align-items-center product-name"><div class="avatar-wrapper me-3">' +
+             
+              '</div</div><div class="d-flex flex-column"><span class="text-nowrap text-heading fw-medium">' +
+              s +
+              '</span><a href="mailto:'+o+'" class="text-truncate d-none d-sm-block">' +
+              o +
+              '</a></div></div>'
+            );
           },
         },
         {
           targets: 6,
-          render: function (t, e, n, a) {
-            return "<span>" + n.price + "</span>";
-          },
-        },
-        {
-          targets: 7,
           responsivePriority: 4,
           render: function (t, e, n, a) {
             return "<span>" + n.qty + "</span>";
           },
         },
         {
-          targets: -2,
+          targets: 7,
+          responsivePriority: 4,
+          render: function (t, e, n, a) {
+            return "<span>" + n.montant + "</span>";
+          },
+        },
+        {
+          targets: -3,
           render: function (t, e, n, a) {
             n = n.status;
             return (
@@ -182,12 +136,20 @@ $(function () {
           },
         },
         {
+          targets: -2, // Second-to-last column
+          render: function(t, e, n, a) {
+            return (
+              '<a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modal_regler" class="btn btn-primary">Règler ?</a>'
+            );
+          }
+        },
+        {
           targets: -1,
           title: "Actions",
           searchable: !1,
           orderable: !1,
           render: function (t, e, n, a) {
-            return '<div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon btn-text-secondary waves-effect waves-light rounded-pill me-50"><i class="ri-edit-box-line ri-20px"></i></button><button class="btn btn-sm btn-icon btn-text-secondary waves-effect waves-light rounded-pill dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="ri-more-2-line ri-20px"></i></button><div class="dropdown-menu dropdown-menu-end m-0"><a href="javascript:0;" class="dropdown-item">View</a><a href="javascript:0;" class="dropdown-item">Suspend</a></div></div>';
+            return '<div class="d-inline-block text-nowrap"><button class="btn btn-lg btn-icon btn-warning waves-effect waves-light rounded-pill me-50" data-bs-toggle="modal" data-bs-target="#edit_spec"><i class="ri-edit-box-line ri-20px"></i></button><button class="btn btn-lg btn-icon btn-primary waves-effect waves-light rounded-pill me-50"><i class="ri-eye-line ri-20px"></i></button></div>';
           },
         },
       ],
@@ -197,8 +159,8 @@ $(function () {
       language: {
         sLengthMenu: "_MENU_",
         search: "",
-        searchPlaceholder: "Search",
-        info: "Displaying _START_ to _END_ of _TOTAL_ entries",
+        searchPlaceholder: "Rechercher",
+        info: "Affichage de _START_ à _END_ des entrées _TOTAL_.",
         paginate: {
           next: '<i class="ri-arrow-right-s-line"></i>',
           previous: '<i class="ri-arrow-left-s-line"></i>',
@@ -355,13 +317,7 @@ $(function () {
             },
           ],
         },
-        {
-          text: '<i class="ri-add-line ri-16px me-0 me-sm-2 align-baseline"></i><span class="d-none d-sm-inline-block">Add Product</span>',
-          className: "add-new btn btn-primary waves-effect waves-light",
-          action: function () {
-            window.location.href = "app-ecommerce-product-add.html";
-          },
-        },
+       
       ],
       responsive: {
         details: {

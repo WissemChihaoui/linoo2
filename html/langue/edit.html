@@ -42,14 +42,6 @@
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="/assets/vendor/libs/typeahead-js/typeahead.css" /> 
-    <link rel="stylesheet" href="/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
-    <link rel="stylesheet" href="/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css">
-    <link rel="stylesheet" href="/assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css">
-    <link rel="stylesheet" href="/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css">
-    <link rel="stylesheet" href="/assets/vendor/libs/tagify/tagify.css" />
-    <link rel="stylesheet" href="/assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
-    <link rel="stylesheet" href="/assets/vendor/libs/typeahead-js/typeahead.css" />
-    <link rel="stylesheet" href="/assets/vendor/libs/typeahead-js/typeahead.css" /> 
     
     <!-- Page CSS -->
     
@@ -363,13 +355,13 @@
           </li>
         </ul>
       </li>
-      <li class="menu-item active">
+      <li class="menu-item">
         <a href="javascript:void(0)" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons ri-focus-3-line"></i>
           <div data-i18n="Missions">Missions</div>
         </a>
         <ul class="menu-sub">
-          <li class="menu-item active">
+          <li class="menu-item">
             <a href="/html/missions/index.html" class="menu-link">
               <i class="menu-icon tf-icons ri-translate"></i>
               <div data-i18n="Missions d'interprétariat">Missions d'interprétariat</div>
@@ -389,7 +381,7 @@
           </li>
         </ul>
       </li>
-      <li class="menu-item">
+      <li class="menu-item active">
         <a href="javascript:void(0)" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons ri-earth-line"></i>
           <div data-i18n="Langues">Langues</div>
@@ -420,171 +412,28 @@
         <!-- Content -->
         
           <div class="container-fluid flex-grow-1 container-p-y">
-            <div class="row mb-3">
-                <div class="col-lg-3 col-sm-6 mb-2">
-                    <div class="card">
-                      <div class="row">
-                        <div class="col-6">
-                          <div class="card-body">
-                            <div class="card-info mb-5">
-                              <h6 class="mb-2 text-nowrap">Missions</h6>
-                              <div class="badge bg-label-primary rounded-pill lh-xs">Ce Mois</div>
-                            </div>
-                            <div class="d-flex align-items-center">
-                              <h4 class="mb-0 me-2">213</h4>
-                              <p class="mb-0 text-success">+15.6%</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-6 text-end d-flex align-items-end">
-                          <div class="card-body pb-0 pt-4">
-                            <img src="/assets/img/illustrations/card-ratings-illustration.png" alt="Ratings" class="img-fluid" width="95">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> 
-                  <div class="col-lg-3 col-sm-6 mb-2">
-                    <div class="card">
-                      <div class="row">
-                        <div class="col-6">
-                          <div class="card-body">
-                            <div class="card-info mb-5">
-                              <h6 class="mb-2 text-nowrap">Commissions</h6>
-                              <div class="badge bg-label-success rounded-pill lh-xs">Ce Mois</div>
-                            </div>
-                            <div class="d-flex align-items-center">
-                              <h4 class="mb-0 me-2">12.2k €</h4>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-6 text-end d-flex align-items-end">
-                          <div class="card-body pb-0 pt-4">
-                            <img src="/assets/img/illustrations/card-session-illustration.png" alt="Ratings" class="img-fluid" width="81">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6 mb-2">
-                    <div class="card">
-                      <div class="row">
-                        <div class="col-6">
-                          <div class="card-body">
-                            <div class="card-info mb-5">
-                              <h6 class="mb-2 text-nowrap">Montant</h6>
-                              <div class="badge bg-label-warning rounded-pill lh-xs">Ce Mois</div>
-                            </div>
-                            <div class="d-flex align-items-end d-flex align-items-center">
-                              <h4 class="mb-0 me-2">42.4k €</h4>
-                              <p class="mb-0 text-success"></p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-6 text-end d-flex align-items-end">
-                          <div class="card-body pb-0 pt-4">
-                            <img src="/assets/img/illustrations/card-customers-illustration.png" alt="Ratings" class="img-fluid" width="84">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6 mb-2">
-                    <div class="card">
-                      <div class="row">
-                        <div class="col-6">
-                          <div class="card-body">
-                            <div class="card-info mb-5">
-                              <h6 class="mb-2 text-nowrap">Réglée & Soldée</h6>
-                              <div class="badge bg-label-secondary rounded-pill lh-xs">Missions</div>
-                            </div>
-                            <div class="d-flex align-items-center">
-                              <h4 class="mb-0 me-2">102</h4>
-                              <p class="mb-0 text-success">+10.8%</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-6 text-end d-flex align-items-end">
-                          <div class="card-body pb-0 pt-4">
-                            <img src="/assets/img/illustrations/card-orders-illustration.png" alt="Ratings" class="img-fluid" width="78">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-              <div class="card mb-6">
-                <h5 class="card-header">Filter les missions</h5>
-                <div class="card-body">
-                  <div class="row">
-                    <!-- Basic -->
-                    <div class="col-md-4 col-12 mb-6">
-                      <div class="form-floating form-floating-outline">
-                        <select id="month-filter" class="selectpicker w-100" data-style="btn-default">
-                          <option value="01">Janvier</option>
-                          <option value="02">Février</option>
-                          <option value="03">Mars</option>
-                          <option value="04">Avril</option>
-                          <option value="05">Mai</option>
-                          <option value="06">Juin</option>
-                          <option value="07">Juillet</option>
-                          <option value="08">Août</option>
-                          <option value="09">Septembre</option>
-                          <option value="10">Octobre</option>
-                          <option value="11">Novembre</option>
-                          <option value="12">Décembre</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-12 mb-6">
-                      <div class="form-floating form-floating-outline">
-                        <select id="year-filter" class="selectpicker w-100" data-style="btn-default">
-                          <option value="2024">2024</option>
-                          <option value="2023">2023</option>
-                          <option value="2022">2022</option>
-                          <option value="2021">2021</option>
-                          <option value="2020">2020</option>
-                          <option value="2019">2019</option>
-                          <option value="2018">2018</option>
-                          <option value="2017">2017</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-12 mb-6">
-                      <div class="form-floating form-floating-outline">
-                        <select id="year-filter" class="selectpicker w-100" data-style="btn-default">
-                          <option value="Non réglèe">Non réglèe</option>
-                          <option value="Réglèe & non soldée">Réglèe & non soldée</option>
-                          <option value="Réglèe & soldée">Réglèe & soldée</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card">
+            <div class="card mb-6">
                 <div class="card-header">
-                  <h5 class="card-title mb-4">Missions d'interprétariat</h5>
+                  <h5 class="card-title mb-0">Ajouter langue</h5>
                 </div>
-                <div class="card-datatable table-responsive">
-                  <table class="datatables-products table">
-                    <thead>
-                      <tr>
-                        <th></th>
-                        <th>ID</th>
-                        <th>Date</th>
-                        <th>Heure</th>
-                        <th>Professionnel</th>
-                        <th>Interprète</th>
-                        <th>Commission</th>
-                        <th>Montant</th>
-                        <th>Etat</th>
-                        <th>Etat Réglement</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                  </table>
+                <div class="card-body">
+                  <!-- Base Price -->
+                  <div class="form-floating form-floating-outline mb-5">
+                    <input value="Spanish" type="text" class="form-control" id="ecommerce-product-price" placeholder="Intitulé " name="productPrice" aria-label="Intitulé ">
+                    <label for="ecommerce-product-price">Intitulé </label>
+                  </div>
+        
+                  <!-- Discounted Price -->
+                  <div class="form-floating form-floating-outline mb-5">
+                    <input type="file" class="form-control" id="ecommerce-product-discount-price" placeholder="Drapeau" name="productDiscountedPrice" aria-label="Drapeau">
+                    <label for="ecommerce-product-discount-price">Drapeau</label>
+                  </div>
+                  
+                  <div class="d-flex align-items-center border-top pt-4">
+                   
+                    <button class="btn btn-primary m-2">Enregistrer</button>
+                    <button class="btn btn-secondary m-2">Retour</button>
+                  </div>
                 </div>
               </div>
           </div>
@@ -632,12 +481,7 @@
   <!-- endbuild -->
 
   <!-- Vendors JS -->
-  <script src="/assets/vendor/libs/moment/moment.js"></script>
-  <script src="/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
-  <script src="/assets/vendor/libs/tagify/tagify.js"></script>
-  <script src="/assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
-  <script src="/assets/vendor/libs/typeahead-js/typeahead.js"></script>
-  <script src="/assets/vendor/libs/bloodhound/bloodhound.js"></script>
+  
   
 
   <!-- Main JS -->
@@ -645,7 +489,6 @@
   
 
   <!-- Page JS -->
-  <script src="/assets/js/app-ecommerce-product-list.js"></script>
   
   
   

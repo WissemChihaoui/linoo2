@@ -1,0 +1,23 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "product_name": "AMLI",
+      "category": 2,
+      "stock": 1,
+      "sku": 19472,
+      "price": "$999",
+      "qty": "10.00 € HT",
+      "montant": "12.00 € TTC",
+      "status": 5,
+      "image": "product-1.png",
+      "product_brand": "Mme HOFF Nathalie",
+      "date": "12/12/2024",
+      "hour": "10h00",
+      "mail": "nathalie.hoff@batigere.fr",
+      "intrepret": "M. AMOGHLY RAHIMI Bahman",
+      "mail_intrepret": "bahman.amoghly@neuf.fr"
+      
+    }
+  ]
+}
