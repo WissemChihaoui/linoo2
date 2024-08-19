@@ -12,33 +12,34 @@
       (e &&
         new Dropzone(e, {
           previewTemplate: `<div class="dz-preview dz-file-preview">
-<div class="dz-details">
-  <div class="dz-thumbnail">
-    <img data-dz-thumbnail>
-    <span class="dz-nopreview">No preview</span>
-    <div class="dz-success-mark"></div>
-    <div class="dz-error-mark"></div>
-    <div class="dz-error-message"><span data-dz-errormessage></span></div>
-    <div class="progress">
-      <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-dz-uploadprogress></div>
+  <div class="dz-details">
+    <div class="dz-thumbnail">
+      <img data-dz-thumbnail>
+      <span class="dz-nopreview">No preview</span>
+      <div class="dz-success-mark"></div>
+      <div class="dz-error-mark"></div>
+      <div class="dz-error-message"><span data-dz-errormessage></span></div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-dz-uploadprogress></div>
+      </div>
     </div>
+    <div class="dz-filename" data-dz-name></div>
+    <div class="dz-size" data-dz-size></div>
   </div>
-  <div class="dz-filename" data-dz-name></div>
-  <div class="dz-size" data-dz-size></div>
-</div>
-</div>`,
+  </div>`,
           parallelUploads: 1,
           maxFilesize: 5,
           acceptedFiles: ".jpg,.jpeg,.png,.gif",
           addRemoveLinks: !0,
           maxFiles: 1,
-        })
+        }),
       document.querySelector("#ecommerce-product-tags")),
-    e = (new Tagify(e), new Date()),
-      document.querySelector("#ecommerce-product-tags2")),
-    e2 = (new Tagify(e2), new Date()),
-    r = document.querySelector(".product-date");
-  r && r.flatpickr({ monthSelectorType: "static", defaultDate: e });
+    e = (new Tagify(e), document.querySelector("#ecommerce-product-tags2")),
+    e2 = new Tagify(e),
+    r = new Date(),
+    datePicker = document.querySelector(".product-date");
+  
+  datePicker && datePicker.flatpickr({ monthSelectorType: "static", defaultDate: r });
 })(),
   $(function () {
     var s,
@@ -93,3 +94,4 @@
         },
       }));
   });
+i

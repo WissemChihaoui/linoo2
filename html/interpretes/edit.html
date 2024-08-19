@@ -522,14 +522,14 @@
                             <div class="row mb-5 gx-5">
                                 <div class="col">
                                     <div class="form-floating form-floating-outline mb-5">
-                                      <input type="text" class="form-control" id="ecommerce-product-name" placeholder="Product title" name="productTitle" aria-label="Product title">
+                                      <input type="text" class="form-control" id="ecommerce-product-name" placeholder="Numéro de SIRET" name="productTitle" aria-label="Numéro de SIRET">
                                       <label for="ecommerce-product-name">Numéro de SIRET</label>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-floating form-floating-outline mb-5">
-                                      <input type="text" class="form-control" id="ecommerce-product-name" placeholder="Product title" name="productTitle" aria-label="Product title">
-                                      <label for="ecommerce-product-name">Prénom</label>
+                                      <input type="text" class="form-control" id="ecommerce-product-name" placeholder="Adresse" name="productTitle" aria-label="Adresse">
+                                      <label for="ecommerce-product-name">Adresse</label>
                                     </div>
                                 </div>
                             </div>
@@ -537,26 +537,21 @@
                               <div class="col">
                                 <div class="mb-5 col ecommerce-select2-dropdown">
                                     <div class="form-floating form-floating-outline">
-                                      <select id="type" class="select2 form-select" data-placeholder="Choisir Type">
-                                        <option value="">Choisir Type</option>
-                                        <option value="Interprète">Interprète</option>
-                                        <option value="Traducteur">Traducteur</option>
-                                        <option value="Interprète et traducteur">Interprète et traducteur</option>
+                                      <select id="Ville" class="select2 form-select" data-placeholder="Choisir Ville">
+                                        <option value="">Choisir Ville</option>
+                                        <option value="Paris">Paris</option>
+                                        <option value="Marseille">Marseille</option>
                                       </select>
-                                      <label for="type">Type</label>
+                                      <label for="Ville">Ville</label>
                                     </div>
                                   </div>
                               </div>
                               <div class="col">
                                 <div class="mb-5 col ecommerce-select2-dropdown">
-                                    <div class="form-floating form-floating-outline">
-                                      <select id="civilite" class="select2 form-select" data-placeholder="Civilité">
-                                        <option value="">Civilité</option>
-                                        <option value="Monsieur">Monsieur</option>
-                                        <option value="Madame">Madame</option>
-                                      </select>
-                                      <label for="civilite">Civilité</label>
-                                    </div>
+                                  <div class="form-floating form-floating-outline mb-5">
+                                    <input type="text" class="form-control" id="ecommerce-product-name" placeholder="Rayon d'intervention (en km) " name="productTitle" aria-label="Rayon d'intervention (en km) ">
+                                    <label for="ecommerce-product-name">Rayon d'intervention (en km) </label>
+                                  </div>
                                   </div>
                               </div>
                               
@@ -634,14 +629,24 @@
                         <!-- Tags -->
                         <div class="mb-5">
                           <div class="form-floating form-floating-outline">
-                            <input id="ecommerce-product-tags" class="form-control h-auto" name="ecommerce-product-tags" value="French,English,Arabic" aria-label="Product Tags" />
-                            <label for="ecommerce-product-tags">Langues</label>
+                            <select id="selectLangue" class="select2 form-select" multiple>
+                                <option value="fr">Français</option>
+                                <option value="en">Anglais</option>
+                                <option value="es">Espagnole</option>
+                                <option value="ar">Arabic</option>
+                            </select>
+                            <label for="selectLangue">Langue</label>
                           </div>
                         </div>
                         <div>
                           <div class="form-floating form-floating-outline">
-                            <input id="ecommerce-product-tags" class="form-control h-auto" name="ecommerce-product-tags" value="French,English,Arabic" aria-label="Product Tags" />
-                            <label for="ecommerce-product-tags">Spécialité</label>
+                            <select id="selectSpec" class="select2 form-select" multiple>
+                                <option value="Artistique">Artistique</option>
+                                <option value="BTP">BTP</option>
+                                <option value="Commercial">Commercial</option>
+                                <option value="Culture">Culture</option>
+                            </select>
+                            <label for="selectSpec">Spécialité</label>
                           </div>
                         </div>
                       </div>
