@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "prof": "Jon Doe",
+     
+      "reviewer": "Zane Scraggs",
+      "email": "zscraggs0@flavors.me",
+    
+      "date": "5/28/2020",
+      
+      "review": 2,
+      "review_ponc": 1,
+      "review_qual": 3,
+      "review_amab":5,
+      "review_prix": 5,
+      "para": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi."
+    }
+  ]
+}

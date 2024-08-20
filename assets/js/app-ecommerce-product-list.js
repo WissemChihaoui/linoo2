@@ -149,7 +149,7 @@ $(function () {
           searchable: !1,
           orderable: !1,
           render: function (t, e, n, a) {
-            return '<div class="d-inline-block text-nowrap"><button class="btn btn-lg btn-icon btn-warning waves-effect waves-light rounded-pill me-50" data-bs-toggle="modal" data-bs-target="#edit_spec"><i class="ri-edit-box-line ri-20px"></i></button><button class="btn btn-lg btn-icon btn-primary waves-effect waves-light rounded-pill me-50"><i class="ri-eye-line ri-20px"></i></button></div>';
+            return '<div class="d-inline-block text-nowrap"><button class="btn btn-lg btn-icon btn-danger waves-effect waves-light rounded-pill me-50" ><i class="ri-delete-bin-6-line ri-20px"></i></button><button data-bs-toggle="modal" data-bs-target="#view-mission" class="btn btn-lg btn-icon btn-primary waves-effect waves-light rounded-pill me-50"><i class="ri-eye-line ri-20px"></i></button></div>';
           },
         },
       ],

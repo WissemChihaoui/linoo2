@@ -43,17 +43,11 @@
     <link rel="stylesheet" href="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="/assets/vendor/libs/typeahead-js/typeahead.css" /> 
     <link rel="stylesheet" href="/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
-  <link rel="stylesheet" href="/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css">
-  <link rel="stylesheet" href="/assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css">
-  <link rel="stylesheet" href="/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css">
-  <link rel="stylesheet" href="/assets/vendor/libs/tagify/tagify.css" />
-  <link rel="stylesheet" href="/assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
-  <link rel="stylesheet" href="/assets/vendor/libs/typeahead-js/typeahead.css" />
-  <link rel="stylesheet" href="/assets/vendor/libs/typeahead-js/typeahead.css" /> 
-
-
-    
-    <!-- Page CSS -->
+<link rel="stylesheet" href="/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css">
+<link rel="stylesheet" href="/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css">
+<link rel="stylesheet" href="/assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css">
+<link rel="stylesheet" href="/assets/vendor/libs/select2/select2.css" />
+<link rel="stylesheet" href="/assets/vendor/libs/%40form-validation/form-validation.css" />
     
     <style>
         #template-customizer{
@@ -293,7 +287,7 @@
         </a>
         
       </li>
-      <li class="menu-item active">
+      <li class="menu-item">
         <a href="javascript:void(0)" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons ri-group-line"></i>
           <div data-i18n="Interprètes & traducteurs">Interprètes & traducteurs</div>
@@ -311,7 +305,7 @@
               <div data-i18n="Gérer les spécialite">Gérer les spécialite</div>
             </a>
           </li>
-          <li class="menu-item active">
+          <li class="menu-item">
             <a href="/html/factures/index.html" class="menu-link">
               <i class="menu-icon tf-icons ri-bill-line"></i>
               <div data-i18n="Facture mensuelles">Facture mensuelles</div>
@@ -422,116 +416,48 @@
         <!-- Content -->
         
           <div class="container-fluid flex-grow-1 container-p-y">
-            <div class="card mb-6">
-                <div class="card-widget-separator-wrapper">
-                  <div class="card-body card-widget-separator">
-                    <div class="row gy-4 gy-sm-1">
-                      <div class="col-sm-4 col-lg-4">
-                        <div class="d-flex justify-content-between align-items-start card-widget-1 border-end pb-4 pb-sm-0">
-                          <div>
-                            <h4 class="mb-0">24</h4>
-                            <p class="mb-0">Interprètes / Traducteurs</p>
-                          </div>
-                          <div class="avatar me-sm-6">
-                            <span class="avatar-initial rounded-3">
-                              <i class="ri-user-line text-heading ri-26px"></i>
-                            </span>
-                          </div>
-                        </div>
-                        <hr class="d-none d-sm-block d-lg-none me-6">
-                      </div>
-                      <div class="col-sm-4 col-lg-4">
-                        <div class="d-flex justify-content-between align-items-start card-widget-2 border-end pb-4 pb-sm-0">
-                          <div>
-                            <h4 class="mb-0">165</h4>
-                            <p class="mb-0">Factures</p>
-                          </div>
-                          <div class="avatar me-lg-6">
-                            <span class="avatar-initial rounded-3">
-                              <i class="ri-pages-line text-heading ri-26px"></i>
-                            </span>
-                          </div>
-                        </div>
-                        <hr class="d-none d-sm-block d-lg-none">
-                      </div>
-                      <div class="col-sm-4 col-lg-4">
-                        <div class="d-flex justify-content-between align-items-start pb-4 pb-sm-0 card-widget-3">
-                          <div>
-                            <h4 class="mb-0">$2.46k</h4>
-                            <p class="mb-0">Montant à régler</p>
-                          </div>
-                          <div class="avatar me-sm-6">
-                            <span class="avatar-initial rounded-3">
-                              <i class="ri-wallet-line text-heading ri-26px"></i>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-6">
-                <h5 class="card-header">Filter les factures</h5>
-                <div class="card-body">
-                  <div class="row">
-                    <!-- Basic -->
-                    <div class="col-md-6 mb-6">
-                      <div class="form-floating form-floating-outline">
-                        <select id="month-filter" class="selectpicker w-100" data-style="btn-default">
-                          <option value="01">Janvier</option>
-                          <option value="02">Février</option>
-                          <option value="03">Mars</option>
-                          <option value="04">Avril</option>
-                          <option value="05">Mai</option>
-                          <option value="06">Juin</option>
-                          <option value="07">Juillet</option>
-                          <option value="08">Août</option>
-                          <option value="09">Septembre</option>
-                          <option value="10">Octobre</option>
-                          <option value="11">Novembre</option>
-                          <option value="12">Décembre</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-md-6 mb-6">
-                      <div class="form-floating form-floating-outline">
-                        <select id="year-filter" class="selectpicker w-100" data-style="btn-default">
-                          <option value="2024">2024</option>
-                          <option value="2023">2023</option>
-                          <option value="2022">2022</option>
-                          <option value="2021">2021</option>
-                          <option value="2020">2020</option>
-                          <option value="2019">2019</option>
-                          <option value="2018">2018</option>
-                          <option value="2017">2017</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Invoice List Table -->
-              <div class="card">
+            <div class="card">
+                
                 <div class="card-datatable table-responsive">
-                  <table class="invoice-list-table table">
+                  <table class="datatables-users table">
                     <thead>
                       <tr>
                         <th></th>
                         <th></th>
-                        <th>Numéro Facture</th>
                         <th>Nom</th>
+                        <th>Prénom</th>
                         <th>Email</th>
-                        <th>Téléphone</th>
-                        <th>Montant à régler TTC</th>
+                        <th>Actions</th>
                       </tr>
                     </thead>
                   </table>
                 </div>
+                <!-- Offcanvas to add new user -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasAddUser" aria-labelledby="offcanvasAddUserLabel">
+                  <div class="offcanvas-header border-bottom">
+                    <h5 id="offcanvasAddUserLabel" class="offcanvas-title">Ajouter Administrateur</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body mx-0 flex-grow-0 h-100">
+                    <form class="add-new-user pt-0" id="addNewUserForm" onsubmit="return false">
+                      <div class="form-floating form-floating-outline mb-5">
+                        <input type="text" class="form-control" id="add-user-fullname" placeholder="John Doe" name="userFullname" aria-label="John" />
+                        <label for="add-user-fullname">Nom</label>
+                      </div>
+                      <div class="form-floating form-floating-outline mb-5">
+                        <input type="text" class="form-control" id="add-user-fullname" placeholder="John Doe" name="userFullname" aria-label="Doe" />
+                        <label for="add-user-fullname">Prénom</label>
+                      </div>
+                      <div class="form-floating form-floating-outline mb-5">
+                        <input type="text" id="add-user-email" class="form-control" placeholder="john.doe@example.com" aria-label="john.doe@example.com" name="userEmail" />
+                        <label for="add-user-email">Email</label>
+                      </div>
+                      <button type="submit" class="btn btn-primary me-sm-3 me-1 data-submit">Enregistrer</button>
+                      <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">Annuler</button>
+                    </form>
+                  </div>
+                </div>
               </div>
-              
           </div>
           <!--/ Content -->
 
@@ -578,20 +504,20 @@
 
   <!-- Vendors JS -->
   <script src="/assets/vendor/libs/moment/moment.js"></script>
-  <script src="/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
-  <script src="/assets/vendor/libs/tagify/tagify.js"></script>
-  <script src="/assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
-  <script src="/assets/vendor/libs/typeahead-js/typeahead.js"></script>
-  <script src="/assets/vendor/libs/bloodhound/bloodhound.js"></script>
-  
-  
-    <!-- Main JS -->
-    <script src="/assets/js/main.js"></script>
-    
-  
-    <!-- Page JS -->
-    <script src="/assets/js/app-invoice-list.js"></script>
+<script src="/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+<script src="/assets/vendor/libs/select2/select2.js"></script>
+<script src="/assets/vendor/libs/%40form-validation/popular.js"></script>
+<script src="/assets/vendor/libs/%40form-validation/bootstrap5.js"></script>
+<script src="/assets/vendor/libs/%40form-validation/auto-focus.js"></script>
+<script src="/assets/vendor/libs/cleavejs/cleave.js"></script>
+<script src="/assets/vendor/libs/cleavejs/cleave-phone.js"></script>
 
+  <!-- Main JS -->
+  <script src="/assets/js/main.js"></script>
+  
+
+  <!-- Page JS -->
+  <script src="/assets/js/app-admins.js"></script>
   
   
 </body>

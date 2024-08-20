@@ -1,0 +1,17 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "first_name": "Galen",
+        "last_name": "Slixby",
+        "email": "gslixby0@abc.net.au"
+       
+      },
+      {
+        "id": 2,
+        "first_name": "Galen",
+        "last_name": "Slixby",
+        "email": "gslixby0@abc.net.au"
+      }
+    ]
+  }
