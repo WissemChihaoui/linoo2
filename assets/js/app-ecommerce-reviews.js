@@ -128,9 +128,9 @@
           { data: "id" },
           { data: "product" },
           { data: "reviewer" },
-          { data: "review" },
-          { data: "date" },
-          { data: "review" },
+          { data: "review", width: '25%' },
+          { data: "date" , width: '10%'},
+          { data: "review", width: '30%'},
           { data: " " },
         ],
         columnDefs: [
@@ -183,12 +183,36 @@
             targets: 4,
             responsivePriority: 2,
             render: function (e, t, a, s) {
-              
-              return (
-               "hey"
-              );
+                var ratings = [
+                    { label: "Ponctualité", value: a.review_ponc },
+                    { label: "Qualité de la traduction", value: a.review_qual },
+                    { label: "Amabilité", value: a.review_amab },
+                    { label: "Rapport Qualité/ Prix", value: a.review_prix }
+                ];
+        
+                var content = $('<div></div>');
+        
+                ratings.forEach(function(rating) {
+                    var ratingDiv = $('<div class="read-only-ratings"></div>').rateYo({
+                        rating: rating.value,
+                        rtl: isRtl,
+                        readOnly: true,
+                        starWidth: "20px",
+                        starSvg:
+                            '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 17L6.12199 20.59L7.71999 13.89L2.48999 9.41L9.35499 8.86L12 2.5L14.645 8.86L21.511 9.41L16.28 13.89L17.878 20.59L12 17Z"/></svg>'
+                    });
+        
+                    var label = $('<div><small>' + rating.label + '</small></div>');
+        
+                    var wrapper = $('<div class="d-flex align-items-center gap-2 border-bottom"></div>');
+                    wrapper.append(label).append(ratingDiv);
+        
+                    content.append(wrapper);
+                });
+        
+                return content.html();
             },
-          },
+        },
           {
             targets: 5,
             render: function (e, t, a, s) {
@@ -205,6 +229,8 @@
           },
           {
             targets: 6,
+            orderable:!1,
+            searchable:!1,
             render: function (e, t, a, s) {
               a = a.para;
               return( a)
@@ -215,7 +241,7 @@
             searchable: !1,
             orderable: !1,
             render: function (e, t, a, s) {
-              return '<div><div class="dropdown"><a href="javascript:;" class="btn btn-sm btn-icon btn-text-secondary rounded-pill waves-effect dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown"><i class="ri-more-2-line ri-20px"></i></a><div class="dropdown-menu dropdown-menu-end"><a href="javascript:;" class="dropdown-item">Download</a><a href="javascript:;" class="dropdown-item">Edit</a><a href="javascript:;" class="dropdown-item">Duplicate</a><div class="dropdown-divider"></div><a href="javascript:;" class="dropdown-item delete-record text-danger">Delete</a></div></div></div>';
+              return '<div class="d-inline-block text-nowrap"><button class="btn delete-record btn-lg btn-icon btn-danger waves-effect waves-light rounded-pill me-50"><i class="ri-delete-bin-6-line ri-20px"></i></button></div>';
             },
           },
         ],
@@ -224,7 +250,7 @@
         language: {
           sLengthMenu: "_MENU_",
           search: "",
-          searchPlaceholder: "Search",
+          searchPlaceholder: "Rechercher",
           paginate: {
             next: '<i class="ri-arrow-right-s-line"></i>',
             previous: '<i class="ri-arrow-left-s-line"></i>',
@@ -235,11 +261,11 @@
             extend: "collection",
             className:
               "btn btn-primary dropdown-toggle me-3 waves-effect waves-light",
-            text: '<i class="ri-upload-2-line ri-16px me-1"></i> <span class="d-none d-sm-inline-block">Export</span>',
+            text: '<i class="ri-upload-2-line ri-16px me-1"></i> <span class="d-none d-sm-inline-block">Exporter</span>',
             buttons: [
               {
                 extend: "print",
-                text: '<i class="ri-printer-line me-1" ></i>Print',
+                text: '<i class="ri-printer-line me-1" ></i>Imprimer',
                 className: "dropdown-item",
                 exportOptions: {
                   columns: [1, 2, 3, 4, 5],
@@ -355,7 +381,7 @@
               },
               {
                 extend: "copy",
-                text: '<i class="ri-file-copy-line me-1"></i>Copy',
+                text: '<i class="ri-file-copy-line me-1"></i>Copier',
                 className: "dropdown-item",
                 exportOptions: {
                   columns: [1, 2, 3, 4, 5],
@@ -408,33 +434,7 @@
             },
           },
         },
-        initComplete: function () {
-          this.api()
-            .columns(6)
-            .every(function () {
-              var t = this,
-                a = $(
-                  '<select id="Review" class="form-select"><option value=""> All </option></select>'
-                )
-                  .appendTo(".review_filter")
-                  .on("change", function () {
-                    var e = $.fn.dataTable.util.escapeRegex($(this).val());
-                    t.search(e ? "^" + e + "$" : "", !0, !1).draw();
-                  });
-              t.data()
-                .unique()
-                .sort()
-                .each(function (e, t) {
-                  a.append(
-                    '<option value="' +
-                      e +
-                      '" class="text-capitalize">' +
-                      e +
-                      "</option>"
-                  );
-                });
-            });
-        },
+
       })),
       $(".dataTables_length").addClass("my-0")),
       $(".datatables-review tbody").on("click", ".delete-record", function () {
