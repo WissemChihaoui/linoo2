@@ -173,7 +173,7 @@
             render: function (e, t, a, s) {
               var r = a.reviewer;
               return (
-                '<div class="d-flex justify-content-start align-items-center customer-name"><div class="d-flex flex-column"><a href="app-ecommerce-customer-details-overview.html"><span class="fw-medium">' +
+                '<div class="d-flex justify-content-start align-items-center customer-name"><div class="d-flex flex-column"><a href="javascript:void(0);"><span class="fw-medium">' +
                 r +
                 '</span></a></div></div>'
               );
@@ -248,13 +248,33 @@
         order: [[2, "asc"]],
         dom: '<"card-header d-flex align-items-md-center flex-wrap pb-md-0 pt-0"<"me-5 ms-n2"f><"dt-action-buttons text-xl-end text-lg-start text-md-end text-start d-flex align-items-end align-items-md-center justify-content-md-end pt-0 gap-4 flex-wrap"l<"review_filter"> <"mx-0 me-md-n3 mt-sm-0"B>>>t<"row mx-2"<"col-sm-12 col-md-6"i><"col-sm-12 col-md-6"p>>',
         language: {
-          sLengthMenu: "_MENU_",
-          search: "",
-          searchPlaceholder: "Rechercher",
-          paginate: {
-            next: '<i class="ri-arrow-right-s-line"></i>',
-            previous: '<i class="ri-arrow-left-s-line"></i>',
+          "sProcessing":     "Traitement en cours...",
+          "sSearch":         "Rechercher&nbsp;:",
+          "sLengthMenu":     "Afficher _MENU_ &eacute;l&eacute;ments",
+          "sInfo":           "Affichage de l'&eacute;l&eacute;ment _START_ &agrave; _END_ sur _TOTAL_ &eacute;l&eacute;ments",
+          "sInfoEmpty":      "Affichage de l'&eacute;l&eacute;ment 0 &agrave; 0 sur 0 &eacute;l&eacute;ment",
+          "sInfoFiltered":   "(filtr&eacute; de _MAX_ &eacute;l&eacute;ments au total)",
+          "sInfoPostFix":    "",
+          "sLoadingRecords": "Chargement en cours...",
+          "sZeroRecords":    "Aucun &eacute;l&eacute;ment &agrave; afficher",
+          "sEmptyTable":     "Aucune donn&eacute;e disponible dans le tableau",
+          "oPaginate": {
+              "sFirst":      "Premier",
+              "sPrevious":   "Pr&eacute;c&eacute;dent",
+              "sNext":       "Suivant",
+              "sLast":       "Dernier"
           },
+          "oAria": {
+              "sSortAscending":  ": activer pour trier la colonne par ordre croissant",
+              "sSortDescending": ": activer pour trier la colonne par ordre d&eacute;croissant"
+          },
+          "select": {
+              "rows": {
+                  "_": "%d lignes s&eacute;lectionn&eacute;es",
+                  "0": "Aucune ligne s&eacute;lectionn&eacute;e",
+                  "1": "1 ligne s&eacute;lectionn&eacute;e"
+              }
+          }
         },
         buttons: [
           {
