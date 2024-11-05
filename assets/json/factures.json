@@ -1,0 +1,21 @@
+{
+    "data": [
+      {
+        "invoice_id": 4477,
+        "issued_date": "12/13/2020",
+        "client_name": "Roxy Floodgate",
+        "service": "Software Development",
+        "total": 3428,
+        "avatar_image": false,
+        "invoice_status": "Paid",
+        "balance": "€724",
+        "due_date": "04/23/2020",
+        "action": 1,
+        "mail":"mail@contact.com",
+        "fax":"+99 999 999",
+        "mobile":"+99 999 999",
+        "document": "Travailler avec un interprète"
+      }
+      
+    ]
+  }
