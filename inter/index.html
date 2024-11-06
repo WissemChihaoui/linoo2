@@ -208,32 +208,6 @@
                 <div class="dropdown-divider"></div>
               </li>
               <li>
-                <a class="dropdown-item" href="javascript:void(0);">
-                  <i class="ri-user-3-line ri-22px me-3"></i><span class="align-middle">Mon profile</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" class="dropdown-item">
-                    <i class="menu-icon tf-icons ri-user-settings-line"></i><span class="align-middle">Gérer les administrateurs</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);">
-                  <i class="ri-settings-4-line ri-22px me-3"></i><span class="align-middle">Paramètres</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);">
-                  <i class="ri-star-half-line ri-22px me-3"></i><span class="align-middle">Evaluations</span>
-                </a>
-              </li>
-             
-              <li>
-                <div class="dropdown-divider"></div>
-              </li>
-              
-             
-              <li>
                 <div class="d-grid px-4 pt-2 pb-1">
                   <a class="btn btn-sm btn-danger d-flex" href="javascript:void(0);" target="_blank">
                     <small class="align-middle">Déconnexion</small>
@@ -279,14 +253,16 @@
               <div class="card-body pt-12">
                 <div class="user-avatar-section">
                   <div class=" d-flex align-items-center flex-column">
-                    <img class="img-fluid rounded-3 mb-4" src="../../assets/img/avatars/1.png" height="120" width="120" alt="User avatar" />
+                    <div class="position-relative">
+                      <img class="img-fluid rounded-3 mb-4 position-relative" src="../../assets/img/avatars/1.png" height="120" width="120" alt="User avatar" />
+                      <button class="btn btn-warning btn-icon mt-1 me-1 position-absolute top-0 " style="right: 0;"><i class="ri-edit-2-line"></i></button>
+                    </div>
                     <div class="user-info text-center">
-                      <h5>Violet Mendoza</h5>
-                      <span class="badge bg-label-danger rounded-pill">Subscriber</span>
+                      <h6>Votre photo</h6>
                     </div>
                   </div>
                 </div>
-                <div class="d-flex align-items-start justify-content-around flex-wrap my-6 gap-0 gap-md-3 gap-lg-4">
+                <!-- <div class="d-flex align-items-start justify-content-around flex-wrap my-6 gap-0 gap-md-3 gap-lg-4">
                   <div class="d-flex align-items-center me-5 gap-4">
                     <div class="avatar">
                       <div class="avatar-initial bg-label-primary rounded-3">
@@ -309,60 +285,93 @@
                       <span>Missions de traduction</span>
                     </div>
                   </div>
-                </div>
-                <h5 class="pb-4 border-bottom mb-4">Details</h5>
+                </div> -->
+                <h5 class="pb-4 border-bottom mb-4">Informations</h5>
                 <div class="info-container">
-                  <ul class="list-unstyled mb-6">
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Société:</span>
-                      <span>violet.dev</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">E-mail:</span>
-                      <span>vafgot@vultukir.org</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">E-mail confirmation:</span>
-                      <span>vafgot@vultukir.org</span>
-                    </li>
+                  <form id="editUserForm" class="row g-5" onsubmit="return false">
+                    <div class="col-12">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserFirstName" name="modalEditUserFirstName" class="form-control" value="Mear invest" placeholder="Oliver" disabled/>
+                        <label for="modalEditUserFirstName">Société</label>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserEmail" name="modalEditUserEmail" class="form-control" value="oliverqueen@gmail.com" placeholder="oliverqueen@gmail.com" />
+                        <label for="modalEditUserEmail">Email</label>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserEmail" name="modalEditUserEmail" class="form-control" value="oliverqueen@gmail.com" placeholder="oliverqueen@gmail.com" />
+                        <label for="modalEditUserEmail">Email confirmation</label>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserPhone" name="modalEditUserPhone" class="form-control phone-number-mask" value="+1 609 933 4422" placeholder="+1 609 933 4422" />
+                        <label for="modalEditUserPhone">Num de fixe</label>
+                      </div>
+                  </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserPhone" name="modalEditUserPhone" class="form-control phone-number-mask" value="+1 609 933 4422" placeholder="+1 609 933 4422" />
+                        <label for="modalEditUserPhone">Num de fixe secondaire</label>
+                      </div>
+                  </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserPhone" name="modalEditUserPhone" class="form-control phone-number-mask" value="+1 609 933 4422" placeholder="+1 609 933 4422" />
+                        <label for="modalEditUserPhone">Num de téléphone</label>
+                      </div>
+                  </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserPhone" name="modalEditUserPhone" class="form-control phone-number-mask" value="+1 609 933 4422" placeholder="+1 609 933 4422" />
+                        <label for="modalEditUserPhone">Num de fax</label>
+                      </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating form-floating-outline">
+                      <select id="modalEditUserStatus" name="modalEditUserStatus" class="form-select" aria-label="Default select example">
+                        <option value="m" selected>Monsieur</option>
+                        <option value="mdm">Madame</option>
+                      </select>
+                      <label for="modalEditUserStatus">Civilité</label>
+                    </div>
+                  </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserLastName" name="modalEditUserLastName" class="form-control" value="Queen" placeholder="Queen" />
+                        <label for="modalEditUserLastName">Nom du représentant</label>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserLastName" name="modalEditUserLastName" class="form-control" value="Queen" placeholder="Queen" />
+                        <label for="modalEditUserLastName">Prénom du représentant</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserName" name="modalEditUserName" class="form-control" value="1 lotissement le nid" placeholder="oliver.queen" />
+                        <label for="modalEditUserName">Adresse de l'établissement</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserName" name="modalEditUserName" class="form-control" value="Uckange 57270 (France)" placeholder="oliver.queen" />
+                        <label for="modalEditUserName">Ville</label>
+                      </div>
+                    </div>
+                   
                     
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Num de fixe:</span>
-                      <span>(123) 456-7890</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Num de fixe secondaire:</span>
-                      <span>(123) 456-7890</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Num de téléphone:</span>
-                      <span>(123) 456-7890</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Num de fax:</span>
-                      <span>(123) 456-7890</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Civilité:</span>
-                      <span>Monsieur</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Nom du représentant:</span>
-                      <span>arami</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Prénom du représentant:</span>
-                      <span>farid</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Adresse de l'établissement:</span>
-                      <span>1 lotissement le nid</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Ville:</span>
-                      <span>Uckange 57270 (France)</span>
-                    </li>
-                  </ul>
+                   
+                    <!-- <div class="col-12 text-center d-flex flex-wrap justify-content-center gap-4 row-gap-4">
+                      <button type="submit" class="btn btn-primary">Enregistrer</button>
+                      <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">Annuler</button>
+                    </div> -->
+                  </form>
                   <div class="d-flex justify-content-center">
                     <a href="javascript:;" class="btn btn-primary me-4" data-bs-target="#editUser" data-bs-toggle="modal">Modifier</a>
                   </div>

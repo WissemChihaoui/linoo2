@@ -90,176 +90,150 @@
 
 
   
-  <nav class="layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme mb-2" id="layout-navbar">
-    <div class="container-fluid">
-      <div class="navbar-brand app-brand demo d-none d-xl-flex py-0 me-6">
-        <a href="javascript:void(0)" class="app-brand-link gap-2">
-          <span class="app-brand-logo demo">
-            <img src="/assets/img/icons/logo.png" width="140" alt="">
-        </span>
-        </a>
-        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-xl-none">
-          <i class="ri-close-fill align-middle"></i>
-        </a>
-      </div>
-      <div class="layout-menu-toggle navbar-nav align-items-xl-center me-4 me-xl-0  d-xl-none  ">
-        <a class="nav-item nav-link px-0 me-xl-6" href="javascript:void(0)">
-          <i class="ri-menu-fill ri-22px"></i>
-        </a>
-      </div>
-      <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-        <ul class="navbar-nav flex-row align-items-center ms-auto">
-            <li class="nav-item">
-                <a href="javascript:void(0)" class="nav-link btn btn-text-secondary rounded-pill btn-icon hide-arrow">
-                    <i class="ri-question-line ri-22px"></i>
-                </a>
-            </li>
-          <!-- Notification -->
-          <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-4 me-xl-1">
-            <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-              <i class="ri-notification-2-line ri-22px"></i>
-              <span class="position-absolute top-0 start-50 translate-middle-y badge badge-dot bg-danger mt-2 border"></span>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end py-0">
-              <li class="dropdown-menu-header border-bottom py-50">
-                <div class="dropdown-header d-flex align-items-center py-2">
-                  <h6 class="mb-0 me-auto">Notification</h6>
-                  <div class="d-flex align-items-center">
-                    <span class="badge rounded-pill bg-label-primary fs-xsmall me-2">2 Nouveaux</span>
-                    <a href="javascript:void(0)" class="btn btn-text-secondary rounded-pill btn-icon dropdown-notifications-all" data-bs-toggle="tooltip" data-bs-placement="top" title="Marquer tous comme lus"><i class="ri-mail-open-line text-heading ri-20px"></i></a>
-                  </div>
-                </div>
-              </li>
-              <li class="dropdown-notifications-list scrollable-container">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item list-group-item-action dropdown-notifications-item">
-                    <div class="d-flex">
-                      <div class="flex-shrink-0 me-3">
-                        <div class="avatar">
-                          <img src="/assets/img/avatars/1.png" alt class="rounded-circle">
-                        </div>
-                      </div>
-                      <div class="flex-grow-1">
-                        <h6 class="small mb-1">Bienvenue Sam 🎉</h6>
-                        <small class="mb-1 d-block text-body">Sam a rejoint la phase des traducteurs</small>
-                        <small class="text-muted">Il y a 1h</small>
-                      </div>
-                      <div class="flex-shrink-0 dropdown-notifications-actions">
-                        <a href="javascript:void(0)" class="dropdown-notifications-read"><span class="badge badge-dot"></span></a>
-                        <a href="javascript:void(0)" class="dropdown-notifications-archive"><span class="ri-close-line ri-20px"></span></a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item list-group-item-action dropdown-notifications-item">
-                    <div class="d-flex">
-                      <div class="flex-shrink-0 me-3">
-                        <div class="avatar">
-                          <span class="avatar-initial rounded-circle bg-label-danger">CF</span>
-                        </div>
-                      </div>
-                      <div class="flex-grow-1">
-                        <h6 class="mb-1 small">Charles se connecter</h6>
-                        <small class="mb-1 d-block text-body">un administrateur est connecté simultanément</small>
-                        <small class="text-muted">Maintenant</small>
-                      </div>
-                      <div class="flex-shrink-0 dropdown-notifications-actions">
-                        <a href="javascript:void(0)" class="dropdown-notifications-read"><span class="badge badge-dot"></span></a>
-                        <a href="javascript:void(0)" class="dropdown-notifications-archive"><span class="ri-close-line ri-20px"></span></a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="border-top">
-                <div class="d-grid p-4">
-                  <a class="btn btn-primary btn-sm d-flex" href="javascript:void(0);">
-                    <small class="align-middle">Voir toutes les notifications</small>
-                  </a>
-                </div>
-              </li>
-            </ul>
+<nav class="layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme mb-2" id="layout-navbar">
+  <div class="container-fluid">
+    <div class="navbar-brand app-brand demo d-none d-xl-flex py-0 me-6">
+      <a href="javascript:void(0)" class="app-brand-link gap-2">
+        <span class="app-brand-logo demo">
+          <img src="/assets/img/icons/logo.png" width="140" alt="">
+      </span>
+      </a>
+      <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-xl-none">
+        <i class="ri-close-fill align-middle"></i>
+      </a>
+    </div>
+    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-4 me-xl-0  d-xl-none  ">
+      <a class="nav-item nav-link px-0 me-xl-6" href="javascript:void(0)">
+        <i class="ri-menu-fill ri-22px"></i>
+      </a>
+    </div>
+    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+      <ul class="navbar-nav flex-row align-items-center ms-auto">
+          <li class="nav-item">
+              <a href="javascript:void(0)" class="nav-link btn btn-text-secondary rounded-pill btn-icon hide-arrow">
+                  <i class="ri-question-line ri-22px"></i>
+              </a>
           </li>
-          <!--/ Notification -->
-
-          <!-- User -->
-          <li class="nav-item navbar-dropdown dropdown-user dropdown">
-            <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-              <div class="avatar avatar-online">
-                <img src="/assets/img/avatars/1.png" alt class="rounded-circle">
+        <!-- Notification -->
+        <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-4 me-xl-1">
+          <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+            <i class="ri-notification-2-line ri-22px"></i>
+            <span class="position-absolute top-0 start-50 translate-middle-y badge badge-dot bg-danger mt-2 border"></span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end py-0">
+            <li class="dropdown-menu-header border-bottom py-50">
+              <div class="dropdown-header d-flex align-items-center py-2">
+                <h6 class="mb-0 me-auto">Notification</h6>
+                <div class="d-flex align-items-center">
+                  <span class="badge rounded-pill bg-label-primary fs-xsmall me-2">2 Nouveaux</span>
+                  <a href="javascript:void(0)" class="btn btn-text-secondary rounded-pill btn-icon dropdown-notifications-all" data-bs-toggle="tooltip" data-bs-placement="top" title="Marquer tous comme lus"><i class="ri-mail-open-line text-heading ri-20px"></i></a>
+                </div>
               </div>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);">
+            </li>
+            <li class="dropdown-notifications-list scrollable-container">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item list-group-item-action dropdown-notifications-item">
                   <div class="d-flex">
-                    <div class="flex-shrink-0 me-2">
-                      <div class="avatar avatar-online">
+                    <div class="flex-shrink-0 me-3">
+                      <div class="avatar">
                         <img src="/assets/img/avatars/1.png" alt class="rounded-circle">
                       </div>
                     </div>
                     <div class="flex-grow-1">
-                      <span class="fw-medium d-block small">John Doe</span>
-                      <small class="text-muted">Admin</small>
+                      <h6 class="small mb-1">Bienvenue Sam 🎉</h6>
+                      <small class="mb-1 d-block text-body">Sam a rejoint la phase des traducteurs</small>
+                      <small class="text-muted">Il y a 1h</small>
+                    </div>
+                    <div class="flex-shrink-0 dropdown-notifications-actions">
+                      <a href="javascript:void(0)" class="dropdown-notifications-read"><span class="badge badge-dot"></span></a>
+                      <a href="javascript:void(0)" class="dropdown-notifications-archive"><span class="ri-close-line ri-20px"></span></a>
                     </div>
                   </div>
+                </li>
+                <li class="list-group-item list-group-item-action dropdown-notifications-item">
+                  <div class="d-flex">
+                    <div class="flex-shrink-0 me-3">
+                      <div class="avatar">
+                        <span class="avatar-initial rounded-circle bg-label-danger">CF</span>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-1 small">Charles se connecter</h6>
+                      <small class="mb-1 d-block text-body">un administrateur est connecté simultanément</small>
+                      <small class="text-muted">Maintenant</small>
+                    </div>
+                    <div class="flex-shrink-0 dropdown-notifications-actions">
+                      <a href="javascript:void(0)" class="dropdown-notifications-read"><span class="badge badge-dot"></span></a>
+                      <a href="javascript:void(0)" class="dropdown-notifications-archive"><span class="ri-close-line ri-20px"></span></a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="border-top">
+              <div class="d-grid p-4">
+                <a class="btn btn-primary btn-sm d-flex" href="javascript:void(0);">
+                  <small class="align-middle">Voir toutes les notifications</small>
                 </a>
-              </li>
-              <li>
-                <div class="dropdown-divider"></div>
-              </li>
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);">
-                  <i class="ri-user-3-line ri-22px me-3"></i><span class="align-middle">Mon profile</span>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" class="dropdown-item">
-                    <i class="menu-icon tf-icons ri-user-settings-line"></i><span class="align-middle">Gérer les administrateurs</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);">
-                  <i class="ri-settings-4-line ri-22px me-3"></i><span class="align-middle">Paramètres</span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="javascript:void(0);">
-                  <i class="ri-star-half-line ri-22px me-3"></i><span class="align-middle">Evaluations</span>
-                </a>
-              </li>
-             
-              <li>
-                <div class="dropdown-divider"></div>
-              </li>
-              
-             
-              <li>
-                <div class="d-grid px-4 pt-2 pb-1">
-                  <a class="btn btn-sm btn-danger d-flex" href="javascript:void(0);" target="_blank">
-                    <small class="align-middle">Déconnexion</small>
-                    <i class="ri-logout-box-r-line ms-2 ri-16px"></i>
-                  </a>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <!--/ Notification -->
+
+        <!-- User -->
+        <li class="nav-item navbar-dropdown dropdown-user dropdown">
+          <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+            <div class="avatar avatar-online">
+              <img src="/assets/img/avatars/1.png" alt class="rounded-circle">
+            </div>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a class="dropdown-item" href="javascript:void(0);">
+                <div class="d-flex">
+                  <div class="flex-shrink-0 me-2">
+                    <div class="avatar avatar-online">
+                      <img src="/assets/img/avatars/1.png" alt class="rounded-circle">
+                    </div>
+                  </div>
+                  <div class="flex-grow-1">
+                    <span class="fw-medium d-block small">John Doe</span>
+                    <small class="text-muted">Admin</small>
+                  </div>
                 </div>
-              </li>
-            </ul>
-          </li>
-          <!--/ User -->
-          
+              </a>
+            </li>
+            <li>
+              <div class="dropdown-divider"></div>
+            </li>
+            <li>
+              <div class="d-grid px-4 pt-2 pb-1">
+                <a class="btn btn-sm btn-danger d-flex" href="javascript:void(0);" target="_blank">
+                  <small class="align-middle">Déconnexion</small>
+                  <i class="ri-logout-box-r-line ms-2 ri-16px"></i>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <!--/ User -->
+        
 
 
-        </ul>
-      </div>
-
-      
-      <!-- Search Small Screens -->
-      <div class="navbar-search-wrapper search-input-wrapper container-fluid d-none">
-        <input type="text" class="form-control search-input  border-0" placeholder="Search..." aria-label="Search...">
-        <i class="ri-close-fill search-toggler cursor-pointer"></i>
-      </div>
-      
-      
+      </ul>
     </div>
-  </nav>
+
+    
+    <!-- Search Small Screens -->
+    <div class="navbar-search-wrapper search-input-wrapper container-fluid d-none">
+      <input type="text" class="form-control search-input  border-0" placeholder="Search..." aria-label="Search...">
+      <i class="ri-close-fill search-toggler cursor-pointer"></i>
+    </div>
+    
+    
+  </div>
+</nav>
   
   
 <!-- / Navbar -->
@@ -279,14 +253,16 @@
               <div class="card-body pt-12">
                 <div class="user-avatar-section">
                   <div class=" d-flex align-items-center flex-column">
-                    <img class="img-fluid rounded-3 mb-4" src="../../assets/img/avatars/1.png" height="120" width="120" alt="User avatar" />
+                    <div class="position-relative">
+                      <img class="img-fluid rounded-3 mb-4 position-relative" src="../../assets/img/avatars/1.png" height="120" width="120" alt="User avatar" />
+                      <button class="btn btn-warning btn-icon mt-1 me-1 position-absolute top-0 " style="right: 0;"><i class="ri-edit-2-line"></i></button>
+                    </div>
                     <div class="user-info text-center">
-                      <h5>Violet Mendoza</h5>
-                      <span class="badge bg-label-danger rounded-pill">Subscriber</span>
+                      <h6>Votre photo</h6>
                     </div>
                   </div>
                 </div>
-                <div class="d-flex align-items-start justify-content-around flex-wrap my-6 gap-0 gap-md-3 gap-lg-4">
+                <!-- <div class="d-flex align-items-start justify-content-around flex-wrap my-6 gap-0 gap-md-3 gap-lg-4">
                   <div class="d-flex align-items-center me-5 gap-4">
                     <div class="avatar">
                       <div class="avatar-initial bg-label-primary rounded-3">
@@ -309,61 +285,94 @@
                       <span>Missions de traduction</span>
                     </div>
                   </div>
-                </div>
-                <h5 class="pb-4 border-bottom mb-4">Details</h5>
+                </div> -->
+                <h5 class="pb-4 border-bottom mb-4">Informations</h5>
                 <div class="info-container">
-                  <ul class="list-unstyled mb-6">
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Société:</span>
-                      <span>violet.dev</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">E-mail:</span>
-                      <span>vafgot@vultukir.org</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">E-mail confirmation:</span>
-                      <span>vafgot@vultukir.org</span>
-                    </li>
+                  <form id="editUserForm" class="row g-5" onsubmit="return false">
+                    <div class="col-12">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserFirstName" name="modalEditUserFirstName" class="form-control" value="Mear invest" placeholder="Oliver" disabled/>
+                        <label for="modalEditUserFirstName">Société</label>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserEmail" name="modalEditUserEmail" class="form-control" value="oliverqueen@gmail.com" placeholder="oliverqueen@gmail.com" />
+                        <label for="modalEditUserEmail">Email</label>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserEmail" name="modalEditUserEmail" class="form-control" value="oliverqueen@gmail.com" placeholder="oliverqueen@gmail.com" />
+                        <label for="modalEditUserEmail">Email confirmation</label>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserPhone" name="modalEditUserPhone" class="form-control phone-number-mask" value="+1 609 933 4422" placeholder="+1 609 933 4422" />
+                        <label for="modalEditUserPhone">Num de fixe</label>
+                      </div>
+                  </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserPhone" name="modalEditUserPhone" class="form-control phone-number-mask" value="+1 609 933 4422" placeholder="+1 609 933 4422" />
+                        <label for="modalEditUserPhone">Num de fixe secondaire</label>
+                      </div>
+                  </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserPhone" name="modalEditUserPhone" class="form-control phone-number-mask" value="+1 609 933 4422" placeholder="+1 609 933 4422" />
+                        <label for="modalEditUserPhone">Num de téléphone</label>
+                      </div>
+                  </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserPhone" name="modalEditUserPhone" class="form-control phone-number-mask" value="+1 609 933 4422" placeholder="+1 609 933 4422" />
+                        <label for="modalEditUserPhone">Num de fax</label>
+                      </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating form-floating-outline">
+                      <select id="modalEditUserStatus" name="modalEditUserStatus" class="form-select" aria-label="Default select example">
+                        <option value="m" selected>Monsieur</option>
+                        <option value="mdm">Madame</option>
+                      </select>
+                      <label for="modalEditUserStatus">Civilité</label>
+                    </div>
+                  </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserLastName" name="modalEditUserLastName" class="form-control" value="Queen" placeholder="Queen" />
+                        <label for="modalEditUserLastName">Nom du représentant</label>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserLastName" name="modalEditUserLastName" class="form-control" value="Queen" placeholder="Queen" />
+                        <label for="modalEditUserLastName">Prénom du représentant</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserName" name="modalEditUserName" class="form-control" value="1 lotissement le nid" placeholder="oliver.queen" />
+                        <label for="modalEditUserName">Adresse de l'établissement</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserName" name="modalEditUserName" class="form-control" value="Uckange 57270 (France)" placeholder="oliver.queen" />
+                        <label for="modalEditUserName">Ville</label>
+                      </div>
+                    </div>
+                   
                     
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Num de fixe:</span>
-                      <span>(123) 456-7890</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Num de fixe secondaire:</span>
-                      <span>(123) 456-7890</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Num de téléphone:</span>
-                      <span>(123) 456-7890</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Num de fax:</span>
-                      <span>(123) 456-7890</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Civilité:</span>
-                      <span>Monsieur</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Nom du représentant:</span>
-                      <span>arami</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Prénom du représentant:</span>
-                      <span>farid</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Adresse de l'établissement:</span>
-                      <span>1 lotissement le nid</span>
-                    </li>
-                    <li class="mb-2">
-                      <span class="fw-medium text-heading me-2">Ville:</span>
-                      <span>Uckange 57270 (France)</span>
-                    </li>
-                  </ul>
-                  <div class="d-flex justify-content-center">
+                   
+                    <!-- <div class="col-12 text-center d-flex flex-wrap justify-content-center gap-4 row-gap-4">
+                      <button type="submit" class="btn btn-primary">Enregistrer</button>
+                      <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">Annuler</button>
+                    </div> -->
+                  </form>
+                  <div class="d-flex justify-content-center mt-4">
                     <a href="javascript:;" class="btn btn-primary me-4" data-bs-target="#editUser" data-bs-toggle="modal">Modifier</a>
                   </div>
                 </div>
