@@ -52,7 +52,7 @@
 <link rel="stylesheet" href="/assets/vendor/libs/select2/select2.css" />
 <link rel="stylesheet" href="/assets/vendor/libs/tagify/tagify.css" />
 <link rel="stylesheet" href="/assets/vendor/libs/%40form-validation/form-validation.css" />
- 
+<link rel="stylesheet" href="/assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
     <link rel="stylesheet" href="/assets/vendor/libs/fullcalendar/fullcalendar.css" />
 <link rel="stylesheet" href="/assets/vendor/libs/flatpickr/flatpickr.css" />
 <link rel="stylesheet" href="/assets/vendor/libs/quill/editor.css" />
@@ -299,10 +299,15 @@
                   <form id="editUserForm" class="row g-5" onsubmit="return false">
                     <div class="col-12">
                       <div class="form-floating form-floating-outline">
-                        <input type="text" id="modalEditUserFirstName" name="modalEditUserFirstName" class="form-control" value="Mear invest" placeholder="Oliver" disabled/>
-                        <label for="modalEditUserFirstName">Société</label>
+                        <select id="selectpickerBasic" class="selectpicker w-100" data-style="btn-default">
+                          <option value="1">Interprète</option>
+                          <option value="2">Traducteur</option>
+                          <option value="3">Interprète et traducteur</option>
+                        </select>
+                        <label for="selectpickerBasic">Je suis</label>
                       </div>
                     </div>
+                    
                     <div class="col-12 col-md-6">
                       <div class="form-floating form-floating-outline">
                         <input type="text" id="modalEditUserEmail" name="modalEditUserEmail" class="form-control" value="oliverqueen@gmail.com" placeholder="oliverqueen@gmail.com" />
@@ -324,52 +329,59 @@
                     <div class="col-12 col-md-6">
                       <div class="form-floating form-floating-outline">
                         <input type="text" id="modalEditUserPhone" name="modalEditUserPhone" class="form-control phone-number-mask" value="+1 609 933 4422" placeholder="+1 609 933 4422" />
-                        <label for="modalEditUserPhone">Num de fixe secondaire</label>
-                      </div>
-                  </div>
-                    <div class="col-12 col-md-6">
-                      <div class="form-floating form-floating-outline">
-                        <input type="text" id="modalEditUserPhone" name="modalEditUserPhone" class="form-control phone-number-mask" value="+1 609 933 4422" placeholder="+1 609 933 4422" />
                         <label for="modalEditUserPhone">Num de téléphone</label>
-                      </div>
-                  </div>
-                    <div class="col-12 col-md-6">
-                      <div class="form-floating form-floating-outline">
-                        <input type="text" id="modalEditUserPhone" name="modalEditUserPhone" class="form-control phone-number-mask" value="+1 609 933 4422" placeholder="+1 609 933 4422" />
-                        <label for="modalEditUserPhone">Num de fax</label>
                       </div>
                   </div>
                   <div class="col-12">
                     <div class="form-floating form-floating-outline">
-                      <select id="modalEditUserStatus" name="modalEditUserStatus" class="form-select" aria-label="Default select example">
-                        <option value="m" selected>Monsieur</option>
+                      <input type="text" id="modalEditUserLastName" name="modalEditUserLastName" class="form-control" value="Queen" placeholder="Queen" />
+                      <label for="modalEditUserLastName">Identifiant Skype</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating form-floating-outline">
+                      <select id="selectpickerBasic" class="selectpicker w-100" data-style="btn-default">
+                        <option value="m">Monsieur</option>
                         <option value="mdm">Madame</option>
                       </select>
-                      <label for="modalEditUserStatus">Civilité</label>
+                      <label for="selectpickerBasic">Civilité</label>
                     </div>
                   </div>
                     <div class="col-12 col-md-6">
                       <div class="form-floating form-floating-outline">
                         <input type="text" id="modalEditUserLastName" name="modalEditUserLastName" class="form-control" value="Queen" placeholder="Queen" />
-                        <label for="modalEditUserLastName">Nom du représentant</label>
+                        <label for="modalEditUserLastName">Nom</label>
                       </div>
                     </div>
                     <div class="col-12 col-md-6">
                       <div class="form-floating form-floating-outline">
                         <input type="text" id="modalEditUserLastName" name="modalEditUserLastName" class="form-control" value="Queen" placeholder="Queen" />
-                        <label for="modalEditUserLastName">Prénom du représentant</label>
+                        <label for="modalEditUserLastName">Prénom</label>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserName" name="modalEditUserName" class="form-control" value="123 465 789 5555 55" placeholder="123 465 798" />
+                        <label for="modalEditUserName">Numéro de SIRET</label>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input type="text" id="modalEditUserName" name="modalEditUserName" class="form-control" value="Uckange 57270 (France)" placeholder="oliver.queen" />
+                        <label for="modalEditUserName">Ville</label>
                       </div>
                     </div>
                     <div class="col-12">
                       <div class="form-floating form-floating-outline">
                         <input type="text" id="modalEditUserName" name="modalEditUserName" class="form-control" value="1 lotissement le nid" placeholder="oliver.queen" />
-                        <label for="modalEditUserName">Adresse de l'établissement</label>
+                        <label for="modalEditUserName">Adresse</label>
                       </div>
                     </div>
+                    
                     <div class="col-12">
                       <div class="form-floating form-floating-outline">
-                        <input type="text" id="modalEditUserName" name="modalEditUserName" class="form-control" value="Uckange 57270 (France)" placeholder="oliver.queen" />
-                        <label for="modalEditUserName">Ville</label>
+                        <input type="number" id="modalEditUserName" name="modalEditUserName" class="form-control" value="5" placeholder="5 KM" />
+                        <label for="modalEditUserName">Rayon d'intervention (en km)</label>
                       </div>
                     </div>
                    
@@ -397,22 +409,37 @@
             <div class="nav-align-top">
               <ul class="nav nav-pills flex-column flex-md-row mb-6 row-gap-2">
                 <li class="nav-item"><a class="nav-link active" href="/client/index.html"><i class="ri-calendar-line me-2"></i>Disponibilités</a></li>
-                <li class="nav-item"><a class="nav-link" href="/client/index.html"><i class="ri-money-euro-box-line me-2"></i>Tarifs / Assermentations</a></li>
-                <li class="nav-item"><a class="nav-link" href="/inter/index.html"><i class="ri-translate-2 me-2"></i>Missions d'interprétariat</a></li>
-                <li class="nav-item"><a class="nav-link" href="/inter/html/missions_traduction.html"><i class="ri-translate me-2"></i>Missions de traduction</a></li>
-                <li class="nav-item"><a class="nav-link" href="/inter/html/factures.html"><i class="ri-star-half-fill me-2"></i>Evaluations</a></li>
-                <li class="nav-item"><a class="nav-link" href="/inter/html/documents.html"><i class="ri-file-text-line me-2"></i>Documents</a></li>
-                <li class="nav-item"><a class="nav-link" href="/inter/html/contract.html"><i class="ri-bar-chart-2-line me-2"></i>Charte</a></li>
-                <li class="nav-item"><a class="nav-link" href="/inter/html/passwords.html"><i class="ri-lock-line me-2"></i>Mot de passe</a></li>
+                <li class="nav-item"><a class="nav-link" href="/client/html/index.html"><i class="ri-money-euro-box-line me-2"></i>Tarifs / Assermentations</a></li>
+                <li class="nav-item"><a class="nav-link" href="/client/html/missions_inter.html"><i class="ri-translate-2 me-2"></i>Missions d'interprétariat</a></li>
+                <li class="nav-item"><a class="nav-link" href="/client/html/missions_traduction.html"><i class="ri-translate me-2"></i>Missions de traduction</a></li>
+                <li class="nav-item"><a class="nav-link" href="/client/html/evaluations.html"><i class="ri-star-half-fill me-2"></i>Evaluations</a></li>
+                <li class="nav-item"><a class="nav-link" href="/client/html/documents.html"><i class="ri-file-text-line me-2"></i>Documents</a></li>
+                <li class="nav-item"><a class="nav-link" href="/client/html/charte.html"><i class="ri-bar-chart-2-line me-2"></i>Charte</a></li>
+                <li class="nav-item"><a class="nav-link" href="/client/html/passwords.html"><i class="ri-lock-line me-2"></i>Mot de passe</a></li>
               </ul>
             </div>
             <!--/ User Tabs -->
         
             <!-- Project table -->
             <div class="card shadow-none border-0 ">
-                <div class="card-body pb-0">
-                  <!-- FullCalendar -->
-                  <div id="calendar"></div>
+              <div class="card app-calendar-wrapper">
+                <div class="row g-0">
+                  <!-- Calendar Sidebar -->
+                 
+                  <!-- /Calendar Sidebar -->
+              
+                  <!-- Calendar & Modal -->
+                  <div class="col app-calendar-content">
+                    <div class="card shadow-none border-0 ">
+                      <div class="card-body pb-0">
+                        <!-- FullCalendar -->
+                        <div id="calendar"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /Calendar & Modal -->
+                </div>
+              </div>
                 </div>
               </div>
             <!-- /Project table -->
@@ -561,7 +588,7 @@
   <script src="/assets/vendor/libs/fullcalendar/fullcalendar.js"></script>
   <script src="/assets/vendor/libs/flatpickr/flatpickr.js"></script>
   
-
+  
   <script src="/assets/vendor/libs/moment/moment.js"></script>
 <script src="/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
 <script src="/assets/vendor/libs/sweetalert2/sweetalert2.js"></script>
@@ -572,6 +599,7 @@
 <script src="/assets/vendor/libs/%40form-validation/popular.js"></script>
 <script src="/assets/vendor/libs/%40form-validation/bootstrap5.js"></script>
 <script src="/assets/vendor/libs/%40form-validation/auto-focus.js"></script>
+<script src="/assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
 
   <!-- Main JS -->
   <script src="/assets/js/main.js"></script>
@@ -584,6 +612,7 @@
 
 <script src="/assets/js/app-calendar-events.js"></script>
 <script src="/assets/js/app-calendar.js"></script>
+<script src="/assets/js/forms-selects.js"></script>
   
   
   
