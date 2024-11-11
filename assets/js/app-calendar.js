@@ -11,8 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
       plugins: [dayGridPlugin, interactionPlugin, listPlugin, timegridPlugin],
       dayMaxEvents: true,
       headerToolbar: {
-        start: "prev,next title",
-        end: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
+        start: "prev",
+        center:"title",
+        end:"next"
       },
       select: function (info) {
         // Get the start and end date of the selected range in YYYY-MM-DD format

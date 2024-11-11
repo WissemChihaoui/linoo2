@@ -56,6 +56,8 @@
     <link rel="stylesheet" href="/assets/vendor/libs/fullcalendar/fullcalendar.css" />
 <link rel="stylesheet" href="/assets/vendor/libs/flatpickr/flatpickr.css" />
 <link rel="stylesheet" href="/assets/vendor/libs/quill/editor.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+
 
     <!-- Page CSS -->
     
@@ -384,7 +386,32 @@
                         <label for="modalEditUserName">Rayon d'intervention (en km)</label>
                       </div>
                     </div>
-                   
+                    <div class="col-md-12 mb-3">
+                      <div class="form-floating form-floating-outline">
+                        <select id="languageSelect" class="selectpicker w-100" 
+                                data-style="btn-default" 
+                                data-live-search="true" 
+                                multiple 
+                                data-tick-icon="ri-check-line text-white">
+                          <option data-icon="flag-icon flag-icon-us">English</option>
+                          <option data-icon="flag-icon flag-icon-fr">French</option>
+                          <option data-icon="flag-icon flag-icon-es">Spanish</option>
+                          <option data-icon="flag-icon flag-icon-de">German</option>
+                          <option data-icon="flag-icon flag-icon-it">Italian</option>
+                          <option data-icon="flag-icon flag-icon-ru">Russian</option>
+                          <option data-icon="flag-icon flag-icon-cn">Chinese</option>
+                          <option data-icon="flag-icon flag-icon-jp">Japanese</option>
+                          <option data-icon="flag-icon flag-icon-kr">Korean</option>
+                        </select>
+                        <label for="languageSelect">Langues</label>
+                      </div>
+                    </div>
+                   <div class="col-12 mb-3">
+                      <div class="form-floating form-floating-outline">
+                        <input id="TagifyCustomListSuggestion" name="TagifyCustomListSuggestion" class="form-control h-auto" placeholder="select technologies" value="">
+                        <label for="TagifyCustomListSuggestion">Spécialité</label>
+                      </div>
+                   </div>
                     
                    
                     <!-- <div class="col-12 text-center d-flex flex-wrap justify-content-center gap-4 row-gap-4">
@@ -424,15 +451,9 @@
             <div class="card shadow-none border-0 ">
               <div class="card app-calendar-wrapper">
                 <div class="row g-0">
-                  <!-- Calendar Sidebar -->
-                 
-                  <!-- /Calendar Sidebar -->
-              
-                  <!-- Calendar & Modal -->
                   <div class="col app-calendar-content">
                     <div class="card shadow-none border-0 ">
                       <div class="card-body pb-0">
-                        <!-- FullCalendar -->
                         <div id="calendar"></div>
                       </div>
                     </div>
@@ -600,6 +621,7 @@
 <script src="/assets/vendor/libs/%40form-validation/bootstrap5.js"></script>
 <script src="/assets/vendor/libs/%40form-validation/auto-focus.js"></script>
 <script src="/assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+<script src="/assets/vendor/libs/tagify/tagify.js"></script>
 
   <!-- Main JS -->
   <script src="/assets/js/main.js"></script>
@@ -609,7 +631,7 @@
   <script src="/assets/js/modal-edit-user.js"></script>
 <script src="/assets/js/app-user-view.js"></script>
 <script src="/assets/js/app-user-view-account.js"></script>
-
+<script src="/assets/js/forms-tagify.js"></script>
 <script src="/assets/js/app-calendar-events.js"></script>
 <script src="/assets/js/app-calendar.js"></script>
 <script src="/assets/js/forms-selects.js"></script>
