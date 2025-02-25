@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="light-style layout-wide customizer-hide"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="/assets/"
+  data-template="horizontal-menu-template"
+  data-style="light"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <title>
+      Multi Steps Sign-up - Pages | Materialize - Material Design HTML Admin
+      Template
+    </title>
+    <meta
+      name="description"
+      content="Materialize – is the most developer friendly &amp; highly customizable Admin Dashboard Template."
+    />
+    <meta
+      name="keywords"
+      content="dashboard, material, material design, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5"
+    />
+    <link rel="canonical" href="https://1.envato.market/materialize_admin" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://demos.pixinvent.com/materialize-html-admin-template/assets/img/favicon/favicon.ico"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;ampdisplay=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/vendor/fonts/remixicon/remixicon.css"
+    />
+    <link rel="stylesheet" href="/assets/vendor/fonts/flag-icons.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/vendor/libs/node-waves/node-waves.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/vendor/css/rtl/core.css"
+      class="template-customizer-core-css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/vendor/css/rtl/theme-default.css"
+      class="template-customizer-theme-css"
+    />
+    <link rel="stylesheet" href="/assets/css/demo.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/vendor/libs/typeahead-js/typeahead.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/vendor/libs/bs-stepper/bs-stepper.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/vendor/libs/bootstrap-select/bootstrap-select.css"
+    />
+    <link rel="stylesheet" href="/assets/vendor/libs/select2/select2.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/vendor/libs/%40form-validation/form-validation.css"
+    />
+    <link rel="stylesheet" href="/assets/vendor/css/pages/page-auth.css" />
+    <script src="/assets/vendor/js/helpers.js"></script>
+    <script src="/assets/vendor/js/template-customizer.js"></script>
+    <script src="/assets/js/config.js"></script>
+  </head>
+
+  <body>
+    <div class="authentication-wrapper authentication-cover">
+      <a
+        href="index.html"
+        class="auth-cover-brand d-flex align-items-center gap-2"
+      >
+        <img src="/assets/img/icons/logo.png" />
+      </a>
+      <div class="authentication-inner row m-0">
+        <div
+          class="d-none d-lg-flex col-lg-3 align-items-center justify-content-center p-12 mt-12 mt-xxl-0"
+        >
+          <img
+            alt="register-multi-steps-illustration"
+            src="/assets/img/illustrations/auth-register-multi-steps-illustration.png"
+            class="h-auto mh-100 w-px-200"
+          />
+        </div>
+        <div
+          class="d-flex col-lg-9 align-items-center justify-content-center authentication-bg p-5"
+        >
+          <div class="w-px-700 mt-12 mt-lg-0 pt-lg-0 pt-4">
+            <div
+              id="multiStepsValidation"
+              class="bs-stepper wizard-numbered shadow-none"
+            >
+              <div class="bs-stepper-header border-bottom-0 mb-2">
+                <div class="step" data-target="#accountDetailsValidation">
+                  <button type="button" class="step-trigger ps-0">
+                    <span class="bs-stepper-circle"
+                      ><i class="ri-check-line"></i
+                    ></span>
+                    <span class="bs-stepper-label">
+                      <span class="bs-stepper-number">01</span>
+                      <span class="d-flex flex-column ms-2">
+                        <span class="bs-stepper-title">Fonction</span>
+                        <span class="bs-stepper-subtitle">Votre fonction</span>
+                      </span>
+                    </span>
+                  </button>
+                </div>
+                <div class="line"></div>
+                <div class="step" data-target="#personalInfoValidation">
+                  <button type="button" class="step-trigger">
+                    <span class="bs-stepper-circle"
+                      ><i class="ri-check-line"></i
+                    ></span>
+                    <span class="bs-stepper-label">
+                      <span class="bs-stepper-number">02</span>
+                      <span class="d-flex flex-column ms-2">
+                        <span class="bs-stepper-title">Personal</span>
+                        <span class="bs-stepper-subtitle"
+                          >Enter Information</span
+                        >
+                      </span>
+                    </span>
+                  </button>
+                </div>
+                <div class="line"></div>
+                <div class="step" data-target="#billingLinksValidation">
+                  <button type="button" class="step-trigger">
+                    <span class="bs-stepper-circle"
+                      ><i class="ri-check-line"></i
+                    ></span>
+                    <span class="bs-stepper-label">
+                      <span class="bs-stepper-number">03</span>
+                      <span class="d-flex flex-column ms-2">
+                        <span class="bs-stepper-title">Billing</span>
+                        <span class="bs-stepper-subtitle">Payment Details</span>
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="bs-stepper-content">
+                <form id="multiStepsForm" onSubmit="return false">
+                  <!-- Account Details -->
+                  <div id="accountDetailsValidation" class="content">
+                    <div class="content-header mb-5">
+                      <h4 class="mb-1">Fonction</h4>
+                      <span>Choisir votre fonction avec Linoo</span>
+                    </div>
+                    <div class="row gx-5">
+                      <div class="col-sm-6 mb-5">
+                        <div class="form-floating form-floating-outline">
+                          <select
+                            id="selectpickerBasic"
+                            class="selectpicker w-100"
+                            data-style="btn-default"
+                          >
+                            <option>Choisir</option>
+                            <option
+                              value="Professionnel à la recherche de traducteurs/interprètes"
+                            >
+                              Professionnel à la recherche de
+                              traducteurs/interprètes
+                            </option>
+                            <option value="Interprète">Interprète</option>
+                            <option value="Traducteur">Traducteur</option>
+                            <option value="Interprète et Traducteur">
+                              Interprète et Traducteur
+                            </option>
+                          </select>
+                          <label for="selectpickerBasic">Je suis</label>
+                        </div>
+                      </div>
+                      <div class="col-12 d-flex justify-content-between">
+                        <button
+                          class="btn btn-outline-secondary btn-prev"
+                          disabled
+                        >
+                          <i
+                            class="ri-arrow-left-line ri-16px me-sm-1_5 me-0"
+                          ></i>
+                          <span class="align-middle d-sm-inline-block d-none"
+                            >Précédent</span
+                          >
+                        </button>
+                        <button class="btn btn-primary btn-next">
+                          <span
+                            class="align-middle d-sm-inline-block d-none me-sm-1_5 me-0"
+                            >Suivant</span
+                          >
+                          <i class="ri-arrow-right-line ri-16px"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Personal Info -->
+                  <div id="personalInfoValidation" class="content">
+                    <!-- Dynamic content will be injected here -->
+                  </div>
+                  <!-- Billing Links -->
+                  <div id="billingLinksValidation" class="content">
+                    <div class="content-header mb-5">
+                      <h4 class="mb-1">Confirmation</h4>
+                    </div>
+                    <div class="row gap-md-0 gap-4 mb-12 gx-5">
+                      Votre inscription a bien été enregistrée sur Linoo et nous
+                      vous en remercions. Vous recevrez dans un délai de 24h vos
+                      identifiants de connexion par courrier électronique.
+                    </div>
+                    <div class="row gx-5">
+                      <div class="col-12 d-flex justify-content-between">
+                        <button class="btn btn-outline-secondary btn-prev">
+                          <i
+                            class="ri-arrow-left-line ri-16px me-sm-1_5 me-0"
+                          ></i>
+                          <span class="align-middle d-sm-inline-block d-none"
+                            >Précédent</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Templates -->
+    <template id="professionnelFormTemplate">
+      <div class="content-header mb-5">
+        <h4 class="mb-1">Données Professionnel</h4>
+        <span>Saisissez vos informations en tant que professionnel</span>
+      </div>
+      <div class="row gx-5">
+        <!-- Add fields specific to Professionnel -->
+        <div class="col-sm-6 mb-5">
+          <div class="form-floating form-floating-outline">
+            <input
+              type="text"
+              id="companyName"
+              name="companyName"
+              class="form-control"
+              placeholder="Nom de la société"
+            />
+            <label for="companyName">Nom de la société</label>
+          </div>
+        </div>
+        <!-- Add more fields as needed -->
+        <div class="col-12 d-flex justify-content-between">
+          <button class="btn btn-outline-secondary btn-prev">
+            <i class="ri-arrow-left-line ri-16px me-sm-1_5 me-0"></i>
+            <span class="align-middle d-sm-inline-block d-none">Précédent</span>
+          </button>
+          <button class="btn btn-primary btn-next">
+            <span
+              class="align-middle d-sm-inline-block d-none me-sm-1_5 me-0"
+              >Suivant</span
+            >
+            <i class="ri-arrow-right-line ri-16px"></i>
+          </button>
+        </div>
+      </div>
+    </template>
+
+    <template id="interpreteTraducteurFormTemplate">
+      <div class="content-header mb-5">
+        <h4 class="mb-1">Données Interprète/Traducteur</h4>
+        <span
+          >Saisissez vos informations en tant qu'interprète ou traducteur</span
+        >
+      </div>
+      <div class="row gx-5">
+        <!-- Add fields specific to Interprète/Traducteur -->
+        <div class="col-sm-6 mb-5">
+          <div class="form-floating form-floating-outline">
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              class="form-control"
+              placeholder="Nom complet"
+            />
+            <label for="fullName">Nom complet</label>
+          </div>
+        </div>
+        <!-- Add more fields as needed -->
+        <div class="col-12 d-flex justify-content-between">
+          <button class="btn btn-outline-secondary btn-prev">
+            <i class="ri-arrow-left-line ri-16px me-sm-1_5 me-0"></i>
+            <span class="align-middle d-sm-inline-block d-none">Précédent</span>
+          </button>
+          <button class="btn btn-primary btn-next">
+            <span
+              class="align-middle d-sm-inline-block d-none me-sm-1_5 me-0"
+              >Suivant</span
+            >
+            <i class="ri-arrow-right-line ri-16px"></i>
+          </button>
+        </div>
+      </div>
+    </template>
+
+    <!-- Core JS -->
+    <script src="/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="/assets/vendor/libs/popper/popper.js"></script>
+    <script src="/assets/vendor/js/bootstrap.js"></script>
+    <script src="/assets/vendor/libs/node-waves/node-waves.js"></script>
+    <script src="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="/assets/vendor/libs/hammer/hammer.js"></script>
+    <script src="/assets/vendor/libs/i18n/i18n.js"></script>
+    <script src="/assets/vendor/libs/typeahead-js/typeahead.js"></script>
+    <script src="/assets/vendor/js/menu.js"></script>
+    <script src="/assets/vendor/libs/cleavejs/cleave.js"></script>
+    <script src="/assets/vendor/libs/cleavejs/cleave-phone.js"></script>
+    <script src="/assets/vendor/libs/bs-stepper/bs-stepper.js"></script>
+    <script src="/assets/vendor/libs/select2/select2.js"></script>
+    <script src="/assets/vendor/libs/%40form-validation/popular.js"></script>
+    <script src="/assets/vendor/libs/%40form-validation/bootstrap5.js"></script>
+    <script src="/assets/vendor/libs/%40form-validation/auto-focus.js"></script>
+    <script src="/assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/pages-auth-multisteps.js"></script>
+    <script src="/assets/js/forms-selects.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const fonctionDropdown = document.getElementById("selectpickerBasic");
+        const personalInfoTab = document.getElementById(
+          "personalInfoValidation"
+        );
+        const professionnelFormTemplate = document.getElementById(
+          "professionnelFormTemplate"
+        );
+        const interpreteTraducteurFormTemplate = document.getElementById(
+          "interpreteTraducteurFormTemplate"
+        );
+
+        function updateFormContent() {
+          const selectedValue = fonctionDropdown.value;
+
+          // Clear the current content of the second tab
+          personalInfoTab.innerHTML = "";
+
+          // Clone the appropriate template and append it to the second tab
+          if (
+            selectedValue ===
+            "Professionnel à la recherche de traducteurs/interprètes"
+          ) {
+            const professionnelForm =
+              professionnelFormTemplate.content.cloneNode(true);
+            personalInfoTab.appendChild(professionnelForm);
+          } else {
+            const interpreteTraducteurForm =
+              interpreteTraducteurFormTemplate.content.cloneNode(true);
+            personalInfoTab.appendChild(interpreteTraducteurForm);
+          }
+        }
+
+        // Initial call to set the correct form based on the default selected value
+        updateFormContent();
+
+        // Add event listener to update the form when the dropdown value changes
+        fonctionDropdown.addEventListener("change", updateFormContent);
+      });
+    </script>
+  </body>
+</html>
